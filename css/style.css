@@ -1,0 +1,303 @@
+@import url(//db.onlinewebfonts.com/c/4aab67e6126386079dc1549704d8d746?family=GENISO);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+* body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+* button {
+  outline: none;
+}
+* a:hover {
+  text-decoration: none;
+}
+* a:active {
+  background-color: transparent;
+}
+* h1,
+* h2,
+* h3,
+* h4,
+* h5 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+@keyframes opacar {
+  to {
+    filter: opacity(0.2);
+  }
+}
+.menuBar {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+.menuBar li h3 {
+  font-size: 1.17em;
+  text-transform: capitalize;
+  margin: 0px 7px;
+}
+.menuBar li a {
+  font-family: GENISO;
+  color: black;
+  text-decoration: none;
+}
+.menuBar li a:hover {
+  text-shadow: 1px 1px 0px #f9c6c9;
+  transition: 0.2s;
+}
+
+.headerInstructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: GENISO;
+  text-align: center;
+}
+
+.containerCustomize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bigRainbow {
+  border: 1px solid black;
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bigRainbow img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  max-height: 800px;
+}
+
+.colors {
+  font-family: GENISO;
+  text-align: center;
+  border: 1px solid black;
+  width: 60%;
+  height: auto;
+}
+
+.colorPalette {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.colorPalette div {
+  width: 50%;
+  height: auto;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 100px;
+  max-height: 100px;
+  border: 1px solid white;
+}
+
+.red {
+  background-color: #f08080;
+}
+
+.white {
+  background-color: #edf2fb;
+}
+
+.blue {
+  background-color: #a0c4ff;
+}
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: #fdffb6;
+}
+
+.green {
+  background-color: #caffbf;
+}
+
+.orange {
+  background-color: #ffd6a5;
+}
+
+.grey {
+  background-color: #d6e2e9;
+}
+
+.brown {
+  background-color: #d7d3c1;
+}
+
+.pendants {
+  font-family: GENISO;
+  text-align: center;
+  border: 1px solid black;
+  width: 60%;
+  height: auto;
+}
+
+.body-market {
+  background-color: #ffc6ff;
+  font-family: GENISO;
+}
+
+.market {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-bar-market {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu-items {
+  padding: 3px;
+  margin-right: 5px;
+  font-size: 30px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid white;
+  color: #ffc6ff;
+}
+.menu-items:hover {
+  cursor: pointer;
+  color: black;
+  box-shadow: 1px 1px 5px white;
+}
+
+.img-200 {
+  width: 200px;
+}
+
+.market-items {
+  background-color: rgba(255, 255, 255, 0.659);
+  width: 210px;
+  height: 300px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.items-container {
+  margin: 20px auto;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.items-container img:hover {
+  transform: scale(1.3);
+  border: 2px solid white;
+}
+
+.button-market-item {
+  margin-bottom: 2px;
+  padding: 1px;
+  font-family: GENISO;
+  color: white;
+  background-color: #f7d9c4;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+.button-market-item:hover {
+  cursor: pointer;
+  background-color: #0000005b;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-items {
+    font-size: 15px;
+  }
+
+  .img-200 {
+    width: 100px;
+  }
+
+  .market-items {
+    width: 110px;
+    height: 170px;
+  }
+
+  .items-container {
+    margin: 20px auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .items-container img:hover {
+    transform: scale(1.5);
+    border: 2px solid white;
+  }
+}
+.head {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.head h1 {
+  margin-bottom: 30px;
+  color: #f4acb7;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-family: GENISO;
+  font-weight: bold;
+  transition: translate(100);
+}
+
+.imageHeader {
+  animation: opacar 5s;
+  animation-fill-mode: forwards;
+}
+
+.textHeader {
+  width: 100%;
+  position: absolute;
+}
+
+#userName {
+  color: #63dea8;
+  font-size: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
