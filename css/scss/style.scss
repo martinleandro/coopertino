@@ -1,0 +1,44 @@
+@import 'resets';
+// @import 'mediasqueries';
+@import 'colors';
+@import 'keyframes';
+@import 'menuBar';
+// @import 'fonts';
+@import 'customize';
+@import 'market';
+@import 'menuSlide';
+@import 'botonMenu';
+
+
+.head {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  h1 {
+    margin-bottom: 30px;
+    color: #f4acb7;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-family: GENISO;
+    font-weight: bold;
+    transition: translate(100);
+  }
+}
+
+.imageHeader {
+  animation: opacar 5s;
+  animation-fill-mode: forwards;
+}
+
+.textHeader {
+  width: 100%;
+  position: absolute;
+}
+
+#userName {
+  color: #63dea8;
+  font-size: 40px;
+}

@@ -1,0 +1,26 @@
+.menuBar {
+  list-style-type: none ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  li {
+    h3 {
+      font-size: 1.17em;
+      text-transform: capitalize;
+      margin: 0px 7px;
+    }
+    a {
+      font-family: GENISO;
+      color: $secondaryColor;
+      text-decoration: none;
+      &:hover {
+        text-shadow: 1px 1px 0px #f9c6c9;
+        transition: .2s;
+      }
+    }
+    
+  }
+}
