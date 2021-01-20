@@ -1,10 +1,14 @@
 @import 'resets';
+// @import 'mediasqueries';
 @import 'colors';
 @import 'keyframes';
 @import 'menuBar';
-@import 'fonts';
+// @import 'fonts';
 @import 'customize';
 @import 'market';
+@import 'menuSlide';
+@import 'botonMenu';
+
 
 .head {
   height: 100vh;

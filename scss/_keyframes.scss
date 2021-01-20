@@ -3,3 +3,61 @@
     filter: opacity(.2);
   }
 }
+
+@keyframes latido {
+  from {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    }
+  10% {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+  } 
+  20% {
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  } 
+  30% {
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  } 
+  40% {
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+  }
+  50% {
+  border-top: 7px solid black;
+  border-left: 7px solid black;
+  border-right: 7px solid black;
+  } 
+  60% {
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+   }
+   70% {
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+   }
+   80% {
+    border-top: 4px solid black;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+   }
+   90% {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+   }
+  to {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+     }
+}
