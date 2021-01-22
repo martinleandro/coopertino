@@ -229,21 +229,56 @@ let elDeSeisColores = document.querySelector('.six-colors')
 let elDeOchoColores = document.querySelector('.eight-colors')
 let modal = document.querySelector('.modalContainer')
 
+let modalInstrucciones = document.querySelector('#modalInstrucciones')
+let primerInstruccion = document.querySelector('.modal-content2')
+let segundaInstruccion = document.querySelector('.modal-content3')
+let primerFlecha = document.querySelector('.arrowCustomize')
+let segundaFlecha = document.querySelector('.arrowCustomize2')
+let botonConfirmar = document.querySelector('.botonConfirmar')
+let botonConfirmarDos = document.querySelector('.botonConfirmar2')
+
+
 botonCuatroColores.addEventListener('click', function(){mostrar(this)})
 botonSeisColores.addEventListener('click', function(){mostrar(this)})
 botonOchoColores.addEventListener('click', function(){mostrar(this)})
+
+botonConfirmar.addEventListener('click', ejecutarInstruccion)
+botonConfirmarDos.addEventListener('click', finalizarInstrucciones)
+
+function ejecutarInstruccion() {
+  primerInstruccion.style.display = 'none';
+  primerFlecha.style.display = 'none';
+  segundaInstruccion.style.display = 'block';
+  segundaFlecha.style.display = 'block';
+}
+
+function finalizarInstrucciones() {
+  primerInstruccion.style.display = 'none';
+  primerFlecha.style.display = 'none';
+  segundaInstruccion.style.display = 'none';
+  segundaFlecha.style.display = 'none';
+  modalInstrucciones.style.display = 'none'
+}
+
+
 
 
 function mostrar(cantidadDeColores) {
   if (cantidadDeColores == botonCuatroColores) {
     elDeCuatroColores.style.display = 'flex'
+    modalInstrucciones.style.display = 'block'
+    primerFlecha.style.display = 'block'
     modal.style.display = 'none'
   } else if (cantidadDeColores == botonSeisColores) {
     elDeSeisColores.style.display = 'flex'
     modal.style.display = 'none'
+    modalInstrucciones.style.display = 'block'
+    primerFlecha.style.display = 'block'
   } else if (cantidadDeColores == botonOchoColores) {
     elDeOchoColores.style.display = 'flex'
     modal.style.display = 'none'
+    modalInstrucciones.style.display = 'block'
+    primerFlecha.style.display = 'block'
   }
 }
 

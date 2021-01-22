@@ -61,3 +61,35 @@
     border-right: 3px solid black;
      }
 }
+
+@keyframes rebote {
+  0%   {position:absolute; top:150px;}
+  25%  {position:absolute; top:150px;}
+  50%  {position:absolute; top:120px;}
+  75%  {position:absolute; top:120px;}
+  100% {position:absolute; top:150px;}
+}
+
+@keyframes rebote2 {
+  0%   {position:absolute; top:475px;}
+  25%  {position:absolute; top:475px;}
+  50%  {position:absolute; top:455px;}
+  75%  {position:absolute; top:455px;}
+  100% {position:absolute; top:475px;}
+}
+
+@keyframes reboteSmart {
+  0%   {position:absolute; top:130px;}
+  25%  {position:absolute; top:130px;}
+  50%  {position:absolute; top:110px;}
+  75%  {position:absolute; top:110px;}
+  100% {position:absolute; top:130px;}
+}
+
+@keyframes rebote2Smart {
+  0%   {position:absolute; top:345px;}
+  25%  {position:absolute; top:345px;}
+  50%  {position:absolute; top:325px;}
+  75%  {position:absolute; top:325px;}
+  100% {position:absolute; top:345px;}
+}
