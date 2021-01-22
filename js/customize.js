@@ -229,23 +229,21 @@ let elDeSeisColores = document.querySelector('.six-colors')
 let elDeOchoColores = document.querySelector('.eight-colors')
 let modal = document.querySelector('.modalContainer')
 
-botonCuatroColores.addEventListener('click', mostrarElDeCuatro)
-botonSeisColores.addEventListener('click', mostrarElDeSeis)
-botonOchoColores.addEventListener('click', mostrarElDeOcho)
+botonCuatroColores.addEventListener('click', function(){mostrar(this)})
+botonSeisColores.addEventListener('click', function(){mostrar(this)})
+botonOchoColores.addEventListener('click', function(){mostrar(this)})
 
 
-function mostrarElDeCuatro() {
-  elDeCuatroColores.style.display = 'flex'
-  modal.style.display = 'none'
-}
-
-function mostrarElDeSeis() {
-  elDeSeisColores.style.display = 'flex'
-  modal.style.display = 'none'
-}
-
-function mostrarElDeOcho() {
-  elDeOchoColores.style.display = 'flex'
-  modal.style.display = 'none'
+function mostrar(cantidadDeColores) {
+  if (cantidadDeColores == botonCuatroColores) {
+    elDeCuatroColores.style.display = 'flex'
+    modal.style.display = 'none'
+  } else if (cantidadDeColores == botonSeisColores) {
+    elDeSeisColores.style.display = 'flex'
+    modal.style.display = 'none'
+  } else if (cantidadDeColores == botonOchoColores) {
+    elDeOchoColores.style.display = 'flex'
+    modal.style.display = 'none'
+  }
 }
 

@@ -25,7 +25,7 @@
 * h3,
 * h4,
 * h5 {
-  margin-top: 20px;
+  margin-top: 5px;
   margin-bottom: 10px;
   line-height: 1.1;
   font-weight: 500;
@@ -117,6 +117,98 @@
   transition: 0.2s;
 }
 
+.menuPrincipal {
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: #b4b4b4;
+}
+.menuPrincipal:hover {
+  transition: 0.5s;
+  opacity: 1;
+}
+.menuPrincipal nav {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.menuPrincipal nav a {
+  color: white;
+}
+.menuPrincipal nav a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  transition: all 0.7s;
+}
+.menuPrincipal nav a:hover:after {
+  width: 100%;
+  background: white;
+}
+
+.carrito {
+  margin-right: 20px;
+  width: 50px;
+}
+.carrito:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .menuPrincipal {
+    font-size: 8px;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    color: white;
+    width: 100%;
+    height: 30px;
+    background-color: #b4b4b4;
+  }
+  .menuPrincipal:hover {
+    transition: 0.5s;
+    opacity: 1;
+  }
+  .menuPrincipal nav {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .menuPrincipal nav a {
+    color: white;
+  }
+  .menuPrincipal nav a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    transition: all 0.7s;
+  }
+  .menuPrincipal nav a:hover:after {
+    width: 100%;
+    background: white;
+  }
+
+  .carrito {
+    margin-right: 20px;
+    width: 30px;
+  }
+  .carrito:hover {
+    transform: scale(1.1);
+  }
+}
 .body-customize {
   background-color: white;
 }
@@ -137,7 +229,7 @@
 }
 
 .containerCustomize {
-  margin-top: 380px;
+  margin-top: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -871,6 +963,14 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 415px) {
+  .containerCustomize {
+    margin-top: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .semi-circulo-blanco {
     z-index: 11;
     top: 305px;
@@ -1159,36 +1259,40 @@
   }
 }
 .body-market {
-  background-color: #fff1e6;
-  font-family: GENISO;
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .market {
-  margin-top: 50px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
 }
 
 .menu-bar-market {
+  margin: 20px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
 
 .menu-items {
   padding: 3px;
-  margin-right: 5px;
-  font-size: 30px;
+  margin: 2px;
+  font-size: 16px;
   text-align: center;
-  background-color: white;
-  border: 1px solid white;
-  color: #ffc6ff;
+  background-color: #b4b4b4;
+  border: 2px solid #b4b4b4;
+  color: white;
 }
 .menu-items:hover {
   cursor: pointer;
-  color: black;
-  box-shadow: 1px 1px 5px white;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: #b4b4b4;
+  border: 2px solid #b4b4b4;
 }
 
 .img-200 {
@@ -1196,22 +1300,21 @@
 }
 
 .market-items {
-  background-color: #eddcd2;
-  width: 210px;
-  height: 300px;
-  margin: 5px;
+  color: #312926;
+  width: 220px;
+  height: 360px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  border: 2px solid white;
   border-radius: 3px;
 }
 
 .items-container {
   margin: 20px auto;
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1220,36 +1323,51 @@
 }
 
 .button-market-item {
-  margin-bottom: 2px;
-  padding: 1px;
-  font-family: GENISO;
-  color: white;
-  background-color: #f7d9c4;
-  border: 1px solid white;
+  margin-bottom: 8px;
+  padding: 2px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  border: 1px solid #e8dada;
   border-radius: 3px;
 }
 .button-market-item:hover {
   cursor: pointer;
+  color: white;
   background-color: #0000005b;
 }
 
 @media only screen and (max-width: 600px) {
   .menu-items {
-    font-size: 15px;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: center;
+    color: white;
+  }
+  .menu-items:hover {
+    cursor: pointer;
+    color: black;
+    box-shadow: 1px 1px 5px white;
+  }
+
+  .market {
+    margin-top: 35px;
   }
 
   .img-200 {
-    width: 100px;
+    overflow: hidden;
+    width: 100%;
   }
 
   .market-items {
-    width: 110px;
-    height: 170px;
+    margin: 7px;
+    width: 140px;
+    height: 270px;
   }
 
   .items-container {
     margin: 20px auto;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1257,8 +1375,8 @@
     flex-wrap: wrap;
   }
   .items-container img:hover {
-    transform: scale(1.5);
-    border: 2px solid white;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
   }
 }
 /* MENU SLIDE */

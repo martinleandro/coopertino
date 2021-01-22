@@ -2,105 +2,46 @@
 
 // MARKET
 
-let selectSizeFour = document.querySelector('#four-colors');
-let selectSizeSix = document.querySelector('#six-colors');
-let selectSizeSixBig = document.querySelector('#six-colors-big');
-let selectSizeMini = document.querySelector('#mini');
-let selectWreath = document.querySelector('#wreath');
-let container = document.querySelector('#marketContainer');
+const selectSizeFour = document.querySelector('#four-colors');
+const selectSizeSix = document.querySelector('#six-colors');
+const selectSizeSixBig = document.querySelector('#six-colors-big');
+const selectSizeMini = document.querySelector('#mini');
+const selectWreath = document.querySelector('#wreath');
+const container = document.querySelector('#marketContainer');
 
-selectSizeFour.addEventListener('click', showFourColors)
-selectSizeSix.addEventListener('click', showSixColors)
-selectSizeSixBig.addEventListener('click', showSixColorsBig)
-selectSizeMini.addEventListener('click', showMini)
-selectWreath.addEventListener('click', showWreath)
+selectSizeFour.addEventListener('click', function () {showProducts(this)})
+selectSizeSix.addEventListener('click', function () {showProducts(this)})
+selectSizeSixBig.addEventListener('click', function () {showProducts(this)})
+selectSizeMini.addEventListener('click', function () {showProducts(this)})
+selectWreath.addEventListener('click', function () {showProducts(this)})
 
-
-function showFourColors() {
+function showProducts(numeroColores) {
 
   let marketItems = document.querySelectorAll('.market-items')
   let arrayItems = Array.from(marketItems);
 
-  arrayItems.forEach(item => {
+  arrayItems.map(item => {
     item.style.display = "none"
-  })
-
-  let selected = arrayItems.filter(item => item.classList.contains('four-colors'))
- 
-  selected.forEach(item => {
-    $(item).fadeIn()
   });
 
+  let selectedFour = arrayItems.filter(item => item.classList.contains('four-colors'))
+  let selectedSix = arrayItems.filter(item => item.classList.contains('six-colors'))
+  let selectedSixBig = arrayItems.filter(item => item.classList.contains('six-colors-big'))
+  let selectedMini = arrayItems.filter(item => item.classList.contains('mini'))
+  let selectedWreath = arrayItems.filter(item => item.classList.contains('wreath'))
+
+  if (numeroColores == selectSizeFour) {
+    $(selectedFour).fadeIn()
+  } else if (numeroColores == selectSizeSix) {
+    $(selectedSix).fadeIn()
+  } else if (numeroColores == selectSizeSixBig) {
+    $(selectedSixBig).fadeIn()
+  } else if (numeroColores == selectWreath) {
+    $(selectedWreath).fadeIn()
+  } else if (numeroColores == selectSizeMini) {
+    $(selectedMini).fadeIn()
+  }
 }
 
-function showSixColors() {
-
-  let marketItems = document.querySelectorAll('.market-items')
-  let arrayItems = Array.from(marketItems);
-  console.log(marketItems)
-  console.log(arrayItems)
-
-  arrayItems.forEach(item => {
-    item.style.display = "none"
-  })
-
-  let selected = arrayItems.filter(item => item.classList.contains('six-colors'))
- 
-  selected.forEach(item => {
-    $(item).fadeIn()
-  });
-
-}
-
-function showSixColorsBig() {
-
-  let marketItems = document.querySelectorAll('.market-items')
-  let arrayItems = Array.from(marketItems);
-
-  arrayItems.forEach(item => {
-    item.style.display = "none"
-  })
-
-  let selected = arrayItems.filter(item => item.classList.contains('six-colors-big'))
- 
-  selected.forEach(item => {
-    $(item).fadeIn()
-  });
-
-}
-
-function showMini() {
-
-  let marketItems = document.querySelectorAll('.market-items')
-  let arrayItems = Array.from(marketItems);
-
-  arrayItems.forEach(item => {
-    $(item).css("display", "none")
-  })
-
-  let selected = arrayItems.filter(item => item.classList.contains('mini'))
- 
-  selected.forEach(item => {
-    $(item).fadeIn()
-  });
-
-}
-
-function showWreath() {
-
-  let marketItems = document.querySelectorAll('.market-items')
-  let arrayItems = Array.from(marketItems);
-
-  arrayItems.forEach(item => {
-    $(item).css("display", "none")
-  })
-
-  let selected = arrayItems.filter(item => item.classList.contains('wreath'))
- 
-  selected.forEach(item => {
-    $(item).fadeIn()
-  });
-
-}
 
 // FIN MARKET

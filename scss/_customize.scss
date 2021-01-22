@@ -18,7 +18,7 @@
 }
 
 .containerCustomize {
-  margin-top: 380px;
+  margin-top: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -759,6 +759,15 @@
 // MEDIA QUERIES
 
 @media screen and (min-width: 100px) and (max-width: 415px) {
+
+  .containerCustomize {
+    margin-top: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
   // CUATRO COLORES
 
 .semi-circulo-blanco {
