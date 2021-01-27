@@ -82,6 +82,94 @@
   }
 }
 
+.button-carrito-item {
+  color: aqua;
+}
+
+// CARRITO
+
+.carrito-item {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  h4 {
+    margin: 10px;
+  }
+}
+
+.img-carrito {
+  width: 80px;
+  margin: 10px;
+}
+
+.h4-carrito {
+  display: block;
+  margin: 10px;
+}
+
+.contenedorCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito {
+  // display: none;
+  // flex-direction: column;
+  // background-color: white;
+  // width: 90%;
+  // margin-left: 574px;
+  // position: fixed;
+  // top: 50px;
+  // right: 0;
+
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  /* height: 100vh; */
+  /* width: 50vh; */
+  /* width: 49%; */
+  /* margin-left: 574px; */
+  position: fixed;
+  top: 50px;
+  right: 0;
+}
+
+.cantidad2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sumarCantidad {
+  border: 1px solid black;
+  margin: 1 px;
+}
+
+.restarCantidad {
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.cantidad {
+  display: none;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #b4b4b4;
+}
+
+
 @media only screen and (max-width: 600px) {
 
 // .menuPrincipal {
@@ -129,6 +217,34 @@
 //       transform: scale(1.1);
 //     }
 //   }  
+
+
+.carrito {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  width: 90%;
+  margin-left: 574px;
+  position: fixed;
+  top: 30px;
+  right: 0;
+}
+
+.img-carrito {
+  width: 50px;
+  margin: 10px;
+}
+
+.h4-carrito {
+  margin: 10px;
+}
+
+.cantidad {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .menu-items {

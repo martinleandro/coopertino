@@ -7,6 +7,50 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="body-market">
+  <!-- VENTANA CONTACTO -->
+
+  <div id="contactanos" class="modalContacto">
+    <div class="modal-contenido">
+      <a class="cerrarContactos" href="#">X</a>
+      <form action="" class="formulario" autocomplete="off">
+        <label for="nombre" class="textoFormulario">Dejanos tu nombre!</label><br>
+        <input type="text" placeholder="Nombre y apellido"><br>
+        <div>
+          <label for="exampleFormControlInput1" class="textoFormulario">Tu mail!</label><br> <br>
+          <input type="email" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+        </div><br>
+        <label for="compañia" class="textoFormulario">A quien le regalarias un coopertino?</label><br>
+        <select>
+          <option selected>Elegí quien se lo merece</option>
+          <option value="1">Amigo</option>
+          <option value="2">Pareja</option>
+          <option value="3">A mi!</option>
+        </select><br>
+        <label for="" class="textoFormulario">Querés recibir novedades de nuevos productos?</label><br>
+        <div class="botonesForm">
+          <div>
+            <input type="radio" id="customRadio1" name="customRadio">
+            <label for="customRadio1" class="textoFormulario opcion1">Si, me encantaría!</label>
+          </div>
+          <div>
+            <input type="radio" id="customRadio2" name="customRadio">
+            <label for="customRadio2" class="textoFormulario opcion2">Paso!</label>
+          </div>
+        </div><br>
+        <div class=" formulario">
+          <label for="exampleFormControlTextarea1" class="textoFormulario">Dejanos tus comentarios que nos super
+            interesan!</label><br>
+          <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div><br>
+        <div class="botonesForm">
+          <button class="botonFormulario" type="submit" class="textoFormulario">Enviar</button>
+          <button class="botonFormulario" type="submit" class="textoFormulario">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FIN VENTANA CONTACTO -->
   <header>
     <div class="menuPrincipal">
       <nav>
@@ -14,10 +58,23 @@
         <a href="market.html">PRODUCTOS</a>
         <a href="customize.html">PERSONALIZALO</a>
         <a href="#">NOSOTROS</a>
-        <a href="#">CONTACTO</a>
-        <a href=""><img class="carrito" src="images/carrito.png" alt="carrito de compras"></a>
+        <a href="#contactanos">CONTACTO</a>
+        <img class="carrito-img" src="images/carrito.png">
       </nav>
     </div>
+    
+      <div id="carrito" class="carrito">
+        <div class="contenedorCarrito">
+        <h3></h3>
+        <h3>Nombre</h3>
+        <h3>Precio</h3>
+        </div>
+        <div class="total">
+          <h4>TOTAL<h4 class="sumaTotal">...</h4></h4>
+        </div>
+      </div>
+  
+    
   </header>
   <main>
     <section class="market">
@@ -44,25 +101,26 @@
 
       
       <div id="marketContainer" class="items-container">
-          <div class="market-items four-colors" data-id="1">
+          <div class="market-items four-colors" data-id="4-1">
             <img class="img-200" src="images/cuatroColores.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
-            <h4>$1200</h4>
-            <div>           
+            <h5>$1200</h5>
+            <div class="contenedorBotonMarket">           
             <button class="button-market-item" type="submit">AGREGAR</button>
             </div>
           </div>
         
-          <div class="market-items four-colors">
+          <div class="market-items four-colors" data-id="4-2">
             <img class="img-200" src="images/cuatroColores1.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
-            <div>          
+            <h4 class="cantidad">1</h4>
+            <div class="contenedorBotonMarket">          
               <button class="button-market-item" type="submit">AGREGAR</button>
             </div>
           </div>
 
-          <div class="market-items four-colors" data-id="1">
+          <div class="market-items four-colors" data-id="4-3">
             <img class="img-200" src="images/cuatroColores2.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
@@ -71,16 +129,16 @@
             </div>
           </div>
 
-          <div class="market-items four-colors">
+          <div class="market-items four-colors" data-id="4-4">
             <img class="img-200" src="images/cuatroColores3.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
-            <h4>$1200</h4>
+            <h5>$1200</h5>
             <div>
               <button class="button-market-item" type="submit">AGREGAR</button>
             </div>
           </div>
 
-          <div class="market-items four-colors">
+          <div class="market-items four-colors" data-id="4-5">
             <img class="img-200" src="images/cuatroColores4.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
@@ -89,7 +147,7 @@
             </div>
           </div>
 
-          <div class="market-items four-colors" data-id="1">
+          <div class="market-items four-colors" data-id="1" data-id="4-6">
             <img class="img-200" src="images/cuatroColores5.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
@@ -98,7 +156,7 @@
             </div>
           </div>
 
-          <div class="market-items four-colors" data-id="1">
+          <div class="market-items four-colors" data-id="1" data-id="4-7">
             <img class="img-200" src="images/cuatroColores6.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
@@ -107,7 +165,7 @@
             </div>
           </div>
 
-          <div class="market-items four-colors" data-id="1">
+          <div class="market-items four-colors" data-id="1" data-id="4-8">
             <img class="img-200" src="images/cuatroColores7.jpg" alt="">
             <h4>ARCOIRIS CUATRO COLORES</h4>
             <h4>$1200</h4>
@@ -120,7 +178,7 @@
 
           <!-- SIX COLORS -->
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-1">
             <img class="img-200" src="images/6C.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -129,7 +187,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-2">
             <img class="img-200" src="images/6C-1.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -138,7 +196,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-3">
             <img class="img-200" src="images/6C-2.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -147,7 +205,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-4">
             <img class="img-200" src="images/6C-3.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -156,7 +214,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-5">
             <img class="img-200" src="images/6C-4.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -165,7 +223,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-6">
             <img class="img-200" src="images/6C-5.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -174,7 +232,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors" data-id="1">
+          <div class="market-items six-colors" data-id="6-7">
             <img class="img-200" src="images/6C-6.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -185,7 +243,7 @@
 
           <!-- BIG -->
 
-          <div class="market-items six-colors-big" data-id="1">
+          <div class="market-items six-colors-big" data-id="6-2-1">
             <img class="img-200" src="images/6CG.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -194,7 +252,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors-big" data-id="1">
+          <div class="market-items six-colors-big" data-id="6-2-2">
             <img class="img-200" src="images/6CG-1.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -203,7 +261,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors-big" data-id="1">
+          <div class="market-items six-colors-big" data-id="6-2-3">
             <img class="img-200" src="images/6CG-2.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -212,7 +270,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors-big" data-id="1">
+          <div class="market-items six-colors-big" data-id="6-2-4">
             <img class="img-200" src="images/6CG-4.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -221,7 +279,7 @@
             </div>
           </div>
 
-          <div class="market-items six-colors-big" data-id="1">
+          <div class="market-items six-colors-big" data-id="6-2-5">
             <img class="img-200" src="images/6CG-5.jpg" alt="">
             <h4>ARCOIRIS SEIS COLORES</h4>
             <h4>$1500</h4>
@@ -237,7 +295,7 @@
 
           <!-- MINI -->
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-1">
             <img class="img-200" src="images/M.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -246,7 +304,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-2">
             <img class="img-200" src="images/M-1.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -255,7 +313,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-3">
             <img class="img-200" src="images/M-2.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -264,7 +322,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-4">
             <img class="img-200" src="images/M-3.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -273,7 +331,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-5">
             <img class="img-200" src="images/M-4.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -282,7 +340,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-6">
             <img class="img-200" src="images/M-5.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -291,7 +349,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-7">
             <img class="img-200" src="images/M-6.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -300,7 +358,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-8">
             <img class="img-200" src="images/M-7.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -309,7 +367,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-9">
             <img class="img-200" src="images/M-8.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -318,7 +376,7 @@
             </div>
           </div>
           
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-10">
             <img class="img-200" src="images/M-9.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -327,7 +385,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-11">
             <img class="img-200" src="images/M-10.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -336,7 +394,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-12">
             <img class="img-200" src="images/M-11.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -345,7 +403,7 @@
             </div>
           </div>
 
-          <div class="market-items mini" data-id="1">
+          <div class="market-items mini" data-id="M-13">
             <img class="img-200" src="images/M-12.jpg" alt="">
             <h4>ARCOIRIS MINI TRES COLORES</h4>
             <h4>$500</h4>
@@ -358,7 +416,7 @@
 
           <!-- WREATH -->
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-1">
             <img class="img-200" src="images/G.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -367,7 +425,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-2">
             <img class="img-200" src="images/G-1.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -376,7 +434,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-3">
             <img class="img-200" src="images/G-2.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -385,7 +443,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-4">
             <img class="img-200" src="images/G-3.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -394,7 +452,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-5">
             <img class="img-200" src="images/G-4.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -403,7 +461,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-6">
             <img class="img-200" src="images/G-5.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -412,7 +470,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-7">
             <img class="img-200" src="images/G-6.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -421,7 +479,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-8">
             <img class="img-200" src="images/G-7.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -430,7 +488,7 @@
             </div>
           </div>
 
-          <div class="market-items wreath" data-id="1">
+          <div class="market-items wreath" data-id="G-9">
             <img class="img-200" src="images/G-8.jpg" alt="">
             <h4>GUIRNALDA 1.4MT</h4>
             <h4>$1900</h4>
@@ -447,6 +505,29 @@
 
     </section>
   </main>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="redes">
+      <a href="#"><img src="images/footer/twitter.png" alt="twitter icono" class="footerIcon twitter"></a>
+      <a href="#"><img src="images/footer/facebook.png" alt="facebook icono" class="footerIcon facebook"></a>
+      <a href="#"><img src="images/footer/instagram.png" alt="instagram icono" class="footerIcon instagram"></a>
+      <a href="#"><img src="images/footer/whatsapp.png" alt="whatsapp icono" class="footerIcon whatsapp"></a>
+    </div>
+    <div class="datos">
+      <h4>Creado y Diseñado por <span class="creador"><a href="https://www.linkedin.com/in/leandro--martin/"
+            target="_blank" class="formaBoton">Leandro Martin</a><img src="images/leandroMartinIn.png" class="fotoLea"
+            alt=""></span></h4>
+    </div>
+    <div class="copyr">
+      <h4>Copyright ® 2021</h4>
+    </div>
+
+
+  </footer>
+
+  <!-- FIN FOOTER -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- <script src="js/jquery.js"></script> -->

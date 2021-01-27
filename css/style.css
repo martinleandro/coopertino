@@ -242,11 +242,11 @@
   background: white;
 }
 
-.carrito {
+.carrito-img {
   margin-right: 20px;
   width: 50px;
 }
-.carrito:hover {
+.carrito-img:hover {
   transform: scale(1.1);
 }
 
@@ -289,11 +289,11 @@
     background: white;
   }
 
-  .carrito {
+  .carrito-img {
     margin-right: 20px;
     width: 30px;
   }
-  .carrito:hover {
+  .carrito-img:hover {
     transform: scale(1.1);
   }
 }
@@ -686,7 +686,7 @@
 
 .colorPalette {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -979,20 +979,34 @@
   border-radius: 200px 200px 0 0;
 }
 
+.modalInstrucciones {
+  display: flex;
+}
+
 .botonConfirmar {
+  color: black;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
   color: white;
-  border: 2px solid black;
   background-color: #6ccee4;
-  padding: 1px;
+  padding: 3px;
   margin: 43px;
+}
+.botonConfirmar:hover {
+  cursor: pointer;
 }
 
 .botonConfirmar2 {
+  color: black;
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
   color: white;
-  border: 2px solid black;
   background-color: #6ccee4;
-  padding: 1px;
+  padding: 3px;
   margin: 43px;
+}
+.botonConfirmar2:hover {
+  cursor: pointer;
 }
 
 .modalContainer2 {
@@ -1012,9 +1026,12 @@
 }
 
 .modalContainer2 .modal-content2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid lightgray;
   border-top: 10px solid #58abb7;
   width: 60%;
@@ -1022,10 +1039,12 @@
 
 .modalContainer2 .modal-content3 {
   display: none;
-  margin-left: 69px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 290px;
   background-color: #fefefe;
-  margin-top: 200px;
-  padding: 20px;
+  margin: auto;
+  padding: 30px;
   border: 1px solid lightgray;
   border-top: 10px solid #58abb7;
   width: 60%;
@@ -1102,7 +1121,7 @@
 
 .arrowCustomize {
   display: none;
-  margin-left: 318px;
+  margin-left: 180px;
   z-index: 1;
   top: 161px;
   position: absolute;
@@ -1113,15 +1132,30 @@
 }
 
 .arrowCustomize2 {
-  display: block;
-  margin-left: 135px;
+  display: none;
+  margin-top: 66px;
   z-index: 20;
-  top: 345px;
   position: absolute;
   width: 100px;
   height: 100px;
   animation: rebote2Smart 0.8s infinite;
   transform: rotate(45deg);
+}
+
+.botonesConfirmacion {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.botonesConfirmacion h4 {
+  margin: 5px;
+  border: 0.5px solid black;
+  border-radius: 3px;
+  padding: 2px;
+}
+.botonesConfirmacion h4:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 100px) and (max-width: 415px) {
@@ -1152,6 +1186,7 @@
   }
 
   .arrowCustomize2 {
+    margin-top: 1px;
     margin-left: 135px;
     z-index: 20;
     top: 345px;
@@ -1448,6 +1483,40 @@
     border-right: 5px solid black;
     border-bottom: 5px solid black;
   }
+
+  .modalContainer2 .modal-content2 {
+    display: flex;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+  }
+
+  .modalContainer2 .modal-content3 {
+    display: none;
+    margin-left: 72px;
+    background-color: #fefefe;
+    margin-top: 200px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+  }
+
+  .botonesConfirmacion {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+  .botonesConfirmacion h4 {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 2px;
+  }
 }
 .body-market {
   background-color: white;
@@ -1528,7 +1597,110 @@
   background-color: #0000005b;
 }
 
+.button-carrito-item {
+  color: aqua;
+}
+
+.carrito-item {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.carrito-item img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+.carrito-item h4 {
+  margin: 10px;
+}
+
+.img-carrito {
+  width: 80px;
+  margin: 10px;
+}
+
+.h4-carrito {
+  display: block;
+  margin: 10px;
+}
+
+.contenedorCarrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carrito {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  /* height: 100vh; */
+  /* width: 50vh; */
+  /* width: 49%; */
+  /* margin-left: 574px; */
+  position: fixed;
+  top: 50px;
+  right: 0;
+}
+
+.cantidad2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sumarCantidad {
+  border: 1px solid black;
+  margin: 1 px;
+}
+
+.restarCantidad {
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.cantidad {
+  display: none;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #b4b4b4;
+}
+
 @media only screen and (max-width: 600px) {
+  .carrito {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: 90%;
+    margin-left: 574px;
+    position: fixed;
+    top: 30px;
+    right: 0;
+  }
+
+  .img-carrito {
+    width: 50px;
+    margin: 10px;
+  }
+
+  .h4-carrito {
+    margin: 10px;
+  }
+
+  .cantidad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .menu-items {
     text-transform: uppercase;
     font-size: 11px;
@@ -1764,6 +1936,321 @@
     left: 0;
     z-index: 6;
     overflow: hidden;
+  }
+}
+/* ---------- FOOTER ---------- */
+.footer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 200px;
+  color: black;
+  background-color: #b4b4b4;
+}
+
+.redes {
+  width: 100%;
+  height: 33%;
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.redes a {
+  padding: 10px;
+}
+
+.redes H4, .redes a {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.datos H4, .datos a {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.copyr {
+  height: 33%;
+}
+.copyr H4 {
+  color: black;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footerIcon:hover {
+  transform: rotate(360deg);
+  transition-duration: 1s;
+}
+
+/* ---------- FIN FOOTER ---------- */
+@media only screen and (max-width: 425px) {
+  .footerIcon {
+    width: 40px;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .fotoLea {
+    display: none;
+  }
+
+  .formaBoton {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+  }
+
+  .creador:hover .formaBoton {
+    background-color: #f7d9c4;
+    color: white;
+    border: 3px solid #627997;
+    transition-duration: 0.5s;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .formaBoton {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+  }
+
+  .creador:hover .formaBoton {
+    background-color: #f7d9c4;
+    color: white;
+    border: 3px solid #627997;
+    transition-duration: 0.5s;
+  }
+
+  .creador:hover .fotoLea {
+    opacity: 1;
+    transform: translate(25px, 0px);
+    transition-duration: 0.8s;
+  }
+
+  .copyr {
+    padding-top: 10px;
+  }
+
+  .fotoLea {
+    opacity: 0;
+    position: sticky;
+    padding-right: 1px;
+  }
+
+  .datos {
+    margin-top: -45px;
+    padding-left: 103px;
+  }
+}
+.modalContacto {
+  z-index: 15;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modalContactoMenu {
+  z-index: 15;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-contenido {
+  background-color: white;
+  width: 90%;
+  padding: 12px 20px;
+  margin: 4% auto;
+  position: relative;
+}
+.modal-contenido textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+#contactanos:target {
+  color: white;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.botonesForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.custom-control-label {
+  padding-right: 30px;
+}
+
+.cerrarContactos {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  float: right;
+  background-color: white;
+  text-shadow: black 0px 0px 20px, black 0px 0px 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.botonFormulario {
+  margin: auto 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  padding: 5px;
+  pointer-events: all;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px, black 0px 0px 10px;
+}
+.botonFormulario:hover {
+  background-color: white;
+  color: white;
+  transition: all 0.5s;
+}
+
+.textoFormulario {
+  color: black;
+  font-size: 24px;
+  background-color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: black;
+}
+
+form input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  border: 0.5px solid black;
+  box-shadow: black 0px 0px 10px, black 0px 0px 10px;
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+form input[type=radio] {
+  box-shadow: none;
+  border: 2px solid black;
+  width: 18px;
+  height: 18px;
+}
+
+input[type=radio]:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid black;
+}
+
+form select {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 0.5px solid black;
+  box-shadow: black 0px 0px 10px, black 0px 0px 10px;
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+form textarea {
+  border: 0.5px solid black;
+  box-shadow: black 0px 0px 10px, black 0px 0px 10px;
+  color: black;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.opcion1 {
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+  .textoFormulario {
+    color: black;
+    font-size: 16px;
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+@media only screen and (max-height: 736px) {
+  .textoFormulario {
+    color: black;
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .modal-contenido {
+    background-image: url(../images/contacto/fondoContacto2.png);
+    width: 100%;
+    padding: 10px 20px;
+    margin: 2% auto;
+    position: relative;
   }
 }
 .head {

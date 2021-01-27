@@ -53,6 +53,7 @@
   height: 250px;
 }
 
+
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -344,7 +345,7 @@
 
 .colorPalette {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -674,20 +675,35 @@
 
 // MODALES
 
+.modalInstrucciones {
+  display: flex;
+}
+
 .botonConfirmar {
+  color: rgb(0, 0, 0);
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
   color: white;
-  border: 2px solid black;
+  // border: 2px solid black;
   background-color: rgb(108, 206, 228);
-  padding: 1px;
+  padding: 3px;
   margin: 43px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .botonConfirmar2 {
+  color: rgb(0, 0, 0);
+  box-shadow: -1px 1px 8px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
   color: white;
-  border: 2px solid black;
   background-color: rgb(108, 206, 228);
-  padding: 1px;
+  padding: 3px;
   margin: 43px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .modalContainer2 {
@@ -707,23 +723,38 @@
 }
 
 .modalContainer2 .modal-content2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 30px;
   border: 1px solid lightgray;
   border-top: 10px solid #58abb7;
   width: 60%;
 }
 
 .modalContainer2 .modal-content3 {
+
   display: none;
-  margin-left: 69px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 290px;
   background-color: #fefefe;
-  margin-top: 200px;
-  padding: 20px;
+  margin: auto;
+  padding: 30px;
   border: 1px solid lightgray;
   border-top: 10px solid #58abb7;
   width: 60%;
+
+  // display: none;
+  // margin-left: 62px;
+  // background-color: #fefefe;
+  // margin-top: 200px;
+  // padding: 20px;
+  // border: 1px solid lightgray;
+  // border-top: 10px solid #58abb7;
+  // width: 60%;
 }
 
 // PRIMER MODAL 
@@ -800,7 +831,7 @@
 
 .arrowCustomize {
   display: none;
-  margin-left: 318px;
+  margin-left: 180px;
   z-index: 1;
   top: 161px;
   position: absolute;
@@ -811,18 +842,31 @@
 }
 
 .arrowCustomize2 {
-  display: block;
-  margin-left: 135px;
+  display: none;
+  margin-top: 66px;
   z-index: 20;
-  top: 345px;
   position: absolute;
   width: 100px;
   height: 100px;
-  animation: rebote2Smart 0.8s infinite;
-  transform: rotate(45deg);
+  animation: rebote2Smart .8s infinite;
+  transform: rotate(45deg)
 }
 
-
+.botonesConfirmacion {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  h4 {
+    margin: 5px;
+    border: .5px solid black;
+    border-radius: 3px;
+    padding: 2px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 
 
 
@@ -864,6 +908,7 @@
 }
 
 .arrowCustomize2 {
+  margin-top: 1px;
   margin-left: 135px;
   z-index: 20;
   top: 345px;
@@ -1167,4 +1212,63 @@
   border-right: 5px solid black;
   border-bottom: 5px solid black;
 }
+
+.modalContainer2 .modal-content2 {
+  display: flex;
+  justify-content: center;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top: 10px solid #58abb7;
+  width: 60%;
+}
+
+.modalContainer2 .modal-content3 {
+  display: none;
+  margin-left: 72px;
+  background-color: #fefefe;
+  margin-top: 200px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-top: 10px solid #58abb7;
+  width: 60%;
+}
+
+.botonesConfirmacion {
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  h4 {
+    margin: 5px;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 2px;
+  }
+}
+
+// .arrowCustomize {
+//   display: none;
+//   margin-left: 180px;
+//   z-index: 1;
+//   top: 161px;
+//   position: absolute;
+//   width: 100px;
+//   height: 100px;
+//   animation: rebote .8s infinite;
+//   transform: rotate(45deg);
+// }
+
+// .arrowCustomize2 {
+//   display: block;
+//   margin-left: 109px;
+//   z-index: 20;
+//   top: 345px;
+//   position: absolute;
+//   width: 100px;
+//   height: 100px;
+//   animation: rebote2Smart 0.8s infinite;
+//   transform: rotate(45deg)
+// }
+
 }

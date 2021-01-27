@@ -248,7 +248,7 @@ botonConfirmarDos.addEventListener('click', finalizarInstrucciones)
 function ejecutarInstruccion() {
   primerInstruccion.style.display = 'none';
   primerFlecha.style.display = 'none';
-  segundaInstruccion.style.display = 'block';
+  segundaInstruccion.style.display = 'flex';
   segundaFlecha.style.display = 'block';
 }
 
@@ -280,5 +280,39 @@ function mostrar(cantidadDeColores) {
     modalInstrucciones.style.display = 'block'
     primerFlecha.style.display = 'block'
   }
+}
+
+
+let carritoIcon = document.querySelector('.carrito-img')
+
+const borrarColores = document.querySelector('#borrar')
+const todosLosArcos = document.querySelectorAll('.arco')
+const arrayDeArcos = Array.from(todosLosArcos);
+
+borrarColores.addEventListener('click', borrarTodos)
+
+
+function borrarTodos() {
+  arrayDeArcos.map((arco) => {
+    arco.style.background = 'white'
+  })
+}
+
+const guardarColores = document.querySelector('#guardar')
+guardarColores.addEventListener('click', guardarTodos)
+
+
+let colores = Array();
+
+function guardarTodos() {
+  arrayDeArcos.map((arco) => {
+    let color = arco.style.background
+    colores.push(color)
+  })
+  guardarStorage()
+}
+
+function guardarStorage() {
+	localStorage.setItem('colores', JSON.stringify(colores));
 }
 
