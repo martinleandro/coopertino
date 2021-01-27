@@ -1,0 +1,88 @@
+.containerQuienesSomos {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:100px auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+
+.imagenNosotros {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.textos {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px;
+}
+
+@media only screen and (max-width:1000px) {
+  .containerQuienesSomos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:100px auto;
+  }
+  
+  .info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  
+  .info2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .imagenNosotros {
+    width: 300px;
+    height: auto;
+  }
+  
+  .textos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+}

@@ -1,6 +1,8 @@
 /* ---------- FOOTER ---------- */
 
 .footer {
+  position: static;
+  bottom: 0;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
