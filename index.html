@@ -12,6 +12,50 @@
 </head>
 
 <body>
+  <!-- VENTANA CONTACTO -->
+
+  <div id="contactanos" class="modalContacto">
+    <div class="modal-contenido">
+      <a class="cerrarContactos" href="#">X</a>
+      <form action="" class="formulario" autocomplete="off">
+        <label for="nombre" class="textoFormulario">Dejanos tu nombre!</label><br>
+        <input type="text" placeholder="Nombre y apellido"><br>
+        <div>
+          <label for="exampleFormControlInput1" class="textoFormulario">Tu mail!</label><br> <br>
+          <input type="email" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+        </div><br>
+        <label for="compañia" class="textoFormulario">A quien le regalarias un coopertino?</label><br>
+        <select>
+          <option selected>Elegí quien se lo merece</option>
+          <option value="1">Amigo</option>
+          <option value="2">Pareja</option>
+          <option value="3">A mi!</option>
+        </select><br>
+        <label for="" class="textoFormulario">Querés recibir novedades de nuevos productos?</label><br>
+        <div class="botonesForm">
+          <div>
+            <input type="radio" id="customRadio1" name="customRadio">
+            <label for="customRadio1" class="textoFormulario opcion1">Si, me encantaría!</label>
+          </div>
+          <div>
+            <input type="radio" id="customRadio2" name="customRadio">
+            <label for="customRadio2" class="textoFormulario opcion2">Paso!</label>
+          </div>
+        </div><br>
+        <div class=" formulario">
+          <label for="exampleFormControlTextarea1" class="textoFormulario">Dejanos tus comentarios que nos super
+            interesan!</label><br>
+          <textarea id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div><br>
+        <div class="botonesForm">
+          <button class="botonFormulario" type="submit" class="textoFormulario">Enviar</button>
+          <button class="botonFormulario" type="submit" class="textoFormulario">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FIN VENTANA CONTACTO -->
   <!-- HEADER -->
   <header data-aos="zoom-in" data-aos-duration="1800" class="head">
     <img class="imageHeader" src="images/header.jpg" alt="">
